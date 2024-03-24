@@ -1,0 +1,14 @@
+---
+const { icon, service, description, imgClass } = Astro.props;
+import { Image } from "astro:assets";
+---
+
+<div
+  class="bg-black/70 rounded-xl px-10 py-12 text-center flex flex-col items-center text-white max-w-[320px]"
+>
+  <Image class={"mb-5 " + imgClass} src={icon} alt={service} />
+  <p class="text-[var(--main-color)] font-medium text-md uppercase">
+    {service}
+  </p>
+  <p class="text-sm">{description}</p>
+</div>

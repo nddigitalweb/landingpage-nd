@@ -1,0 +1,14 @@
+---
+import { Image } from "astro:assets";
+
+const { icon, name, classForImg } = Astro.props;
+---
+
+<div
+  class="h-[160px] w-fit px-2 py-5 rounded-lg border-2 border-[var(--main-color)] bg-[#171717]/90 flex flex-col items-center justify-center"
+>
+  <Image class={"w-[75px] h-full " + classForImg} src={icon} alt={name} />
+  <p class="max-w-[120px] text-center leading-4 text-sm font-medium text-white">
+    {name}
+  </p>
+</div>

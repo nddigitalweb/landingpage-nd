@@ -1,0 +1,154 @@
+---
+import ButtonForModal from "../components/funnel/ButtonForModal.jsx";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="ND - Analisis de negocio" useHeader={false}>
+  <main>
+    <section class="home-funnel">
+      <div class="opacity-frame flex flex-col items-center">
+        <img
+          src="./logo-nobg.png"
+          class="logo"
+          alt="logotipo neuromarketing digital"
+        />
+        <h2 class="text-center">ASESORIA DIGITAL PARA EL EXITO EMPRESARIAL</h2>
+        <ButtonForModal client:visible />
+      </div>
+    </section>
+    <section class="information-funnel">
+      <div class="opacity-frame op-mod flex flex-col items-center">
+        <h3 class="text-center title">Te ayudamos a potenciar tu negocio</h3>
+        <p class="text-center">
+          Obtén un <strong
+            >análisis detallado y personalizado de tu negocio</strong
+          >, diseñado para identificar oportunidades de crecimiento y
+          optimización. <strong
+            >Descubre cómo puedes impulsar tus ingresos y alcanzar tus metas de
+            facturación.</strong
+          >
+        </p>
+        <div class="frame-funnel mb-20">
+          <p class="text-center">
+            Estrategias de neuromarketing para <br />
+            <span class="accent-text">FIDELIZAR TUS CLIENTES</span>
+          </p>
+          <p class="text-center">
+            Mejora tu presencia online con una <br />
+            <span class="accent-text">IMAGEN EFECTIVA</span>
+          </p>
+          <p class="text-center">
+            Te ayudamos a <br /><span class="accent-text"
+              >DESTACAR ANTE TU COMPETENCIA</span
+            >
+          </p>
+          <p class="text-center">
+            Neuroventas para <br /><span class="accent-text"
+              >MAXIMIZAR TUS INGRESOS</span
+            >
+          </p>
+        </div>
+        <ButtonForModal client:visible />
+      </div>
+    </section>
+
+    <footer class="bg-[#2e2e2e] text-white">
+      <p class="text-center m-0 p-2">
+        Neuromarketing Digital - Todos los derechos reservados
+      </p>
+    </footer>
+  </main>
+</Layout>
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+  :root {
+    --accent-color: #caa41b;
+  }
+
+  /* normalize css */
+
+  * {
+    font-family: "Montserrat", sans-serif;
+  }
+
+  /* home - click funnel */
+
+  section.home-funnel {
+    background-image: url("/funnel-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    min-height: 85vh;
+  }
+
+  div.opacity-frame {
+    background-color: rgba(0, 0, 0, 0.85);
+    min-height: 85vh;
+    padding: 50px 35px;
+  }
+
+  .home-funnel .logo {
+    width: 20rem;
+  }
+
+  .home-funnel h2 {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 30px 0 70px 0;
+  }
+
+  /* funnel - information section */
+  section.information-funnel {
+    background-image: url("./papper-background.webp");
+    background-size: cover;
+  }
+
+  div.opacity-frame.op-mod {
+    background-color: rgba(0, 0, 0, 0.45);
+    padding: 80px 35px;
+    height: fit-content;
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 1.55rem;
+    padding: 0 20px;
+    color: var(--accent-color);
+  }
+
+  .information-funnel p {
+    color: white;
+    margin-top: 50px;
+    font-size: 14px;
+    margin-bottom: 60px;
+    padding: 0 10px;
+  }
+
+  div.frame-funnel {
+    border: 2px solid var(--accent-color);
+    width: 100%;
+    background-color: #2525257a;
+  }
+
+  div.frame-funnel p {
+    padding: 0 25px;
+    margin: 30px 0;
+    font-size: 16px;
+  }
+
+  span.accent-text {
+    color: #c9a750;
+    font-weight: bold;
+  }
+
+  .information-funnel button {
+    margin-top: 70px;
+  }
+  /* footer styles */
+  footer p {
+    font-size: 12px;
+  }
+</style>

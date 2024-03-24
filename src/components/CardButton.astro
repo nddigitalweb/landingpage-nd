@@ -1,0 +1,22 @@
+---
+const { title, text, buttonPrimary, buttonSecondary, extraClasses } =
+  Astro.props;
+---
+
+<div
+  class={"text-center max-w-[350px] rounded-[15px] bg-[#171717]/90 text-white flex flex-col align-center p-[40px] " +
+    extraClasses}
+>
+  <p class="font-medium text-[1.1rem]">{title}</p>
+  <p class="pt-4 pb-6">{text}</p>
+  <a
+    href="#contacto"
+    class="mx-2 uppercase font-medium bg-[var(--main-color)] p-[10px] rounded"
+    >{buttonPrimary}</a
+  >
+  <a
+    href="servicios"
+    class="mx-2 uppercase font-medium text-[var(--main-color)] rounded p-[10px] border-2 my-1 border-[var(--main-color)]"
+    >{buttonSecondary}</a
+  >
+</div>

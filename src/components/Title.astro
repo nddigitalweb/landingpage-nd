@@ -1,0 +1,13 @@
+---
+const { first, second, extraClasses } = Astro.props;
+---
+
+<p
+  class={"font-medium text-white text-[18px] uppercase text-center leading-6 " +
+    extraClasses}
+>
+  {first}
+  <br /><span class="text-[25px] text-[var(--main-color)] font-bold"
+    >{second}</span
+  >
+</p>

@@ -1,0 +1,179 @@
+---
+import Layout from "../layouts/Layout.astro";
+import CardButton from "../components/CardButton.astro";
+import Title from "../components/Title.astro";
+import SkillCard from "../components/SkillCard.astro";
+import Divider from "../components/Divider.astro";
+import Slider from "../components/Slider.jsx";
+import ServiceCard from "../components/ServiceCard.astro";
+// ICONS
+import { Image } from "astro:assets";
+import rocketIcon from "../assets/rocketIcon.svg";
+import increaseIcon from "../assets/increaseIcon.webp";
+import targetIcon from "../assets/targetIcon.webp";
+import vistaIcon from "../assets/vistaIcon.webp";
+import graphicIcon from "../assets/graphicIcon.webp";
+import instagram from "../assets/instagram 1.png";
+import whatsapp from "../assets/whatsapp 1.png";
+import videoIcon from "../assets/videoIcon.webp";
+import marketingIcon from "../assets/marketingIcon.webp";
+import likeIcon from "../assets/likeIcon.webp";
+import webIcon from "../assets/webDevIcon.webp";
+---
+
+<Layout title="Neuromarketing Digital" useHeader={true}>
+  <section id="home">
+    <div class="bg-black/70 h-full flex justify-center">
+      <CardButton
+        extraClasses="absolute bottom-[-120px] mx-4"
+        title="Asesoria digital para el ámbito empresarial"
+        text="Analizamos tu negocio para que logres exprimir su maximo potencial"
+        buttonPrimary="contactar"
+        buttonSecondary="mas informacion"
+      />
+    </div>
+  </section>
+  <section id="nosotros" class="overflow-hidden">
+    <div class="pt-48 bg-black/40 flex items-center flex-col">
+      <Title first="sobre" second="nosotros" />
+      <p
+        class="max-w-[500px] lg:text-lg text-white text-center px-9 mt-10 mb-16 font-light text-[14px]"
+      >
+        Somos un equipo de expertos en marketing digital que combina creatividad
+        y estrategia para ofrecer soluciones innovadoras. Desde diseño web hasta
+        publicidad en línea, nos comprometemos a maximizar la presencia y el
+        crecimiento de los negocios.
+      </p>
+      <div class="flex flex-wrap justify-center gap-2 lg:max-w-[320px]">
+        <SkillCard
+          classForImg="scale-[1.1]"
+          icon={rocketIcon}
+          name="Potenciamos tu negocio"
+        />
+        <SkillCard
+          classForImg="scale-[.8] mb-1"
+          icon={increaseIcon}
+          name="Aumentamos tus ingresos"
+        />
+        <SkillCard
+          classForImg="scale-[1.1]"
+          icon={vistaIcon}
+          name="Aumentamos tu visibilidad"
+        />
+        <SkillCard
+          classForImg="scale-[.8] mb-1"
+          icon={targetIcon}
+          name="Alcanzamos tus objetivos"
+        />
+      </div>
+      <Divider />
+      <Title first="conoce a" second="nuestro equipo" />
+      <Slider
+        slides={[
+          { name: "joaquin dicio", role: "Web Developer" },
+          { name: "joaquin dicio", role: "Web Developer" },
+          { name: "joaquin dicio", role: "Web Developer" },
+          { name: "joaquin dicio", role: "Web Developer" },
+          { name: "joaquin dicio", role: "Web Developer" },
+          { name: "joaquin dicio", role: "Web Developer" },
+        ]}
+        client:visible
+      />
+    </div>
+  </section>
+  <section id="servicios" class="w-full relative overflow-hidden h-full">
+    <!-- top dividers -->
+    <div class="w-full bg-[#2e2e2e] h-10 absolute top-0 z-10"></div>
+    <div
+      class="w-full bg-[var(--main-color)] h-[45px] sm:rotate-[-2deg] md:rotate-[-1deg] rotate-[-3deg] absolute top-7"
+    >
+      <!-- content  -->
+    </div>
+    <div
+      class="bg-black/80 min-h-screen flex flex-col items-center gap-3 pb-32"
+    >
+      <Title
+        extraClasses="pt-[150px] pb-12"
+        first="nuestros"
+        second="servicios"
+      />
+      <ServiceCard
+        imgClass="service-icon h-[5rem] w-[5rem]"
+        icon={graphicIcon}
+        service="Diseño grafico"
+        description="Tenemos todo lo necesario para la imagen de tu marca"
+      />
+      <ServiceCard
+        imgClass="service-icon h-[5rem] w-[5rem]"
+        icon={webIcon}
+        service="desarrollo web"
+        description="Tenemos todo lo necesario para la imagen de tu marca"
+      />
+      <ServiceCard
+        imgClass="service-icon h-[6rem] w-[6rem]"
+        icon={likeIcon}
+        service="gestion de redes"
+        description="Tenemos todo lo necesario para la imagen de tu marca"
+      />
+      <ServiceCard
+        imgClass="service-icon h-[6rem] w-[6rem]"
+        icon={videoIcon}
+        service="creacion de contenido audiovisual"
+        description="Tenemos todo lo necesario para la imagen de tu marca"
+      />
+      <ServiceCard
+        imgClass="service-icon h-[5rem] w-[5rem]"
+        icon={marketingIcon}
+        service="Neuromarketing y publicidad"
+        description="Tenemos todo lo necesario para la imagen de tu marca"
+      />
+    </div>
+    <!-- dividers -->
+    <div
+      class="scale-x-110 w-full bg-[#2e2e2e] h-[45px] absolute bottom-8 rotate-[-3deg] sm:rotate-[-2deg] md:rotate-[-1deg] md:scale-y-110 z-10"
+    >
+    </div>
+    <div class="md:scale-x-110 w-full h-[45px] bg-[var(--main-color)] z-[1]">
+    </div>
+  </section>
+  <section id="contacto" class="relative overflow-hidden">
+    <div class="bg-black/50 py-40 flex flex-col items-center">
+      <Title first="si quieres" second="contactarte" extraClasses="mb-16" />
+      <div class="flex gap-2 mb-20">
+        <Image src={whatsapp} alt="whatsapp" />
+        <Image src={instagram} alt="instagram" />
+      </div>
+      <a
+        href="/funnel"
+        class="bg-[var(--main-color)] rounded-md font-medium px-10 py-4 text-white text-lg"
+        >PIDE TU ANALISIS AQUI</a
+      >
+    </div>
+    <div
+      class="scale-x-110 w-full bg-[var(--main-color)] h-[45px] absolute bottom-8 rotate-[-3deg] sm:rotate-[-2deg] md:rotate-[-1deg] md:scale-y-110 z-10"
+    >
+    </div>
+    <div class="md:scale-x-110 w-full bg-[#2e2e2e] h-[45px]"></div>
+  </section>
+</Layout>
+
+<style>
+  #home {
+    background-image: url("/home-background.webp");
+    height: 80vh;
+    background-size: cover;
+    background-position-x: -80px;
+    position: relative;
+  }
+  #nosotros,
+  #contacto {
+    background-image: url("/papper-background.webp");
+    background-position: center;
+    background-size: cover;
+  }
+  #servicios {
+    background-image: url("/black-prism-concept-ai-generated.webp");
+    background-position: center;
+    background-size: cover;
+  }
+</style>
