@@ -6,7 +6,7 @@ export default function Modal({ close }) {
   const [company, setCompany] = useState("");
   const [employees, setEmployees] = useState("");
   const [email, setEmail] = useState("");
-  const template = `https://api.whatsapp.com/send?phone=+541126655209&text=QUIERO+MI+ANALISIS+%F0%9F%94%A5%0A%0A${company}+%F0%9F%8F%AD%0A${email}+%E2%9C%89%EF%B8%8F%0A${employees}+%F0%9F%A7%91`;
+  const template = `https://api.whatsapp.com/send?phone=+34631544570&text=QUIERO+MI+ANALISIS+%F0%9F%94%A5%0A%0A${company}+%F0%9F%8F%AD%0A${email}+%E2%9C%89%EF%B8%8F%0A${employees}+%F0%9F%A7%91`;
 
   async function handleClick() {
     try {
