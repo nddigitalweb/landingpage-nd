@@ -9,8 +9,10 @@ export default function Modal({ close }) {
   const [loading, setLoading] = useState(false);
   const template = `https://api.whatsapp.com/send?phone=+34631544570&text=QUIERO+MI+ANALISIS+%F0%9F%94%A5%0A%0A${company}+%F0%9F%8F%AD%0A${email}+%E2%9C%89%EF%B8%8F%0A${employees}+%F0%9F%A7%91`;
 
-  async function handleClick() {
+  async function handleClick(e) {
     try {
+      e.preventDefault();
+      console.log("click");
       setLoading(true);
       if (validateFields()) {
         await saveInDb(company, employees, email);
@@ -24,8 +26,8 @@ export default function Modal({ close }) {
   }
 
   function validateFields() {
-    if (company.trim() === "" || email.trim() === "") return false;
-    if (employees.trim() === "" || isNaN(employees)) return false;
+    if (company.trim() === "" || email.trim() === "" || employees.trim() === "")
+      return false;
     return true;
   }
 
@@ -36,7 +38,7 @@ export default function Modal({ close }) {
     >
       <div id="modal" className="max-w-[200px]">
         <p className="text-lg font-medium mb-5">Completa el formulario</p>
-        <form action="" id="modal-form">
+        <form className="flex flex-col" id="modal-form">
           <input
             value={company}
             onChange={(e) => setCompany(e.target.value)}
@@ -58,7 +60,10 @@ export default function Modal({ close }) {
             placeholder="E-mail"
             type="text"
           />
-          <button onClick={handleClick} className="main">
+          <button
+            onClick={(e) => handleClick(e)}
+            className="main mx-auto my-2 w-full"
+          >
             {loading ? "Enviando..." : "Enviar"}
           </button>
         </form>
