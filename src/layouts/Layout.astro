@@ -7,6 +7,7 @@ interface Props {
 const { title, useHeader = true } = Astro.props;
 
 import Header from "../components/Header.astro";
+import WhatsappIcon from "../components/WhatsappIcon.astro";
 ---
 
 <!doctype html>
@@ -35,6 +36,7 @@ import Header from "../components/Header.astro";
     }
     <main>
       <slot />
+      <WhatsappIcon />
     </main>
   </body>
 </html>
