@@ -6,45 +6,56 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="ND - Analisis de negocio" useHeader={false}>
   <main>
     <section class="home-funnel">
-      <div class="opacity-frame flex flex-col items-center">
-        <img
-          src="/logo-nobg.png"
-          class="logo"
-          alt="logotipo neuromarketing digital"
-        />
-        <h2 class="text-center">ASESORIA DIGITAL PARA EL EXITO EMPRESARIAL</h2>
+      <div
+        class="opacity-frame h-screen flex flex-col items-center justify-center"
+      >
+        <h2 class="text-center">
+          <span class="font-bold text-3xl">NACHO MAUGERI</span><br />
+          <span class="text-white">GROWTH PARTNER</span>
+        </h2>
+        <p class="text-white max-w-[400px] my-20 text-center text-[18px] mx-5">
+          Creamos <span class="font-bold text-[var(--accent-color)]"
+            >embudos de venta personalizados</span
+          >
+          para tu empresa
+        </p>
         <ButtonForModal client:visible />
       </div>
     </section>
     <section class="information-funnel">
-      <div class="opacity-frame op-mod flex flex-col items-center">
-        <h3 class="text-center title">Te ayudamos a potenciar tu negocio</h3>
-        <p class="text-center">
-          Obtén un <strong
-            >análisis detallado y personalizado de tu negocio</strong
-          >, diseñado para identificar oportunidades de crecimiento y
-          optimización. <strong
-            >Descubre cómo puedes impulsar tus ingresos y alcanzar tus metas de
-            facturación.</strong
-          >
+      <div
+        class="opacity-frame op-mod pb-12 px-5 flex flex-col items-center text-white text-center"
+      >
+        <h3 class="title">Creamos flujo de clientes para tu negocio</h3>
+        <p class="mt-10 px-10">
+          Como tus Growth Partners, ofrecemos un <strong
+            >servicio integral diseñado para potenciar tu negocio</strong
+          > mediante estrategias de crecimiento efectivas y personalizadas.
+        </p>
+        <p class="mt-5 mb-10 px-10">
+          Nuestro enfoque único combina la creación de embudos de ventas
+          optimizados con campañas publicitarias estratégicas y generación de
+          leads, asegurando un <strong
+            >aumento significativo en las ventas y un retorno de la inversión</strong
+          > tangible para tu empresa.
         </p>
         <div class="frame-funnel mb-20">
           <p class="text-center">
-            Estrategias de neuromarketing para <br />
-            <span class="accent-text">FIDELIZAR TUS CLIENTES</span>
+            Embudos de ventas para <br />
+            <span class="accent-text">CAPTAR MAS CLIENTES</span>
           </p>
           <p class="text-center">
-            Mejora tu presencia online con una <br />
-            <span class="accent-text">IMAGEN EFECTIVA</span>
+            Closers de ventas para<br />
+            <span class="accent-text">AUMENTAR LA EFECTIVIDAD</span>
           </p>
           <p class="text-center">
-            Te ayudamos a <br /><span class="accent-text"
-              >DESTACAR ANTE TU COMPETENCIA</span
+            Email y Whatsapp marketing para<br /><span class="accent-text"
+              >QUE TUS CLIENTES RECOMPREN</span
             >
           </p>
           <p class="text-center">
-            Neuroventas para <br /><span class="accent-text"
-              >MAXIMIZAR TUS INGRESOS</span
+            Creación de estrategias comerciales para<br /><span
+              class="accent-text">AUMENTAR LAS OPORTUNIDADES DE VENTA</span
             >
           </p>
         </div>
@@ -74,41 +85,26 @@ import Layout from "../layouts/Layout.astro";
   }
 
   /* home - click funnel */
-
-  section.home-funnel {
-    background-image: url("/funnel-bg.png");
+  main {
+    background-image: url("/papper-background.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right;
-    min-height: 85vh;
   }
 
   div.opacity-frame {
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: rgba(0, 0, 0, 0.45);
     min-height: 85vh;
-    padding: 50px 35px;
-  }
-
-  .home-funnel .logo {
-    width: 20rem;
   }
 
   .home-funnel h2 {
     color: var(--accent-color);
     font-size: 1.5rem;
     font-weight: 500;
-    margin: 30px 0 70px 0;
-  }
-
-  /* funnel - information section */
-  section.information-funnel {
-    background-image: url("/papper-background.webp");
-    background-size: cover;
   }
 
   div.opacity-frame.op-mod {
     background-color: rgba(0, 0, 0, 0.45);
-    padding: 80px 35px;
     height: fit-content;
   }
 
@@ -117,14 +113,6 @@ import Layout from "../layouts/Layout.astro";
     font-size: 1.55rem;
     padding: 0 20px;
     color: var(--accent-color);
-  }
-
-  .information-funnel p {
-    color: white;
-    margin-top: 50px;
-    font-size: 14px;
-    margin-bottom: 60px;
-    padding: 0 10px;
   }
 
   div.frame-funnel {
